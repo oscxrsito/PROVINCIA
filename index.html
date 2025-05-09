@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mapa Interactivo de Provincias</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Mapa Interactivo de las Provincias</h1>
+  <p>Haz clic sobre una provincia para ver más información.</p>
+
+  <div class="contenedor-mapa">
+    <img src="mapa-republica-dominicana.jpg" alt="Mapa RD" usemap="#mapaRD">
+
+    <map name="mapaRD">
+       <area shape="poly" coords="262,266,275,283,295,306,320,296,311,263,323,241,322,213,339,209,358,228,368,200,356,186,345,185,337,162,322,158,295,159,291,196,238,222,245,234" alt="La Vega" 
+       data-provincia="La vega" href="javascript:void(0);" onclick="abrirProvincia(this)">
+   
+       <area shape="poly" coords="145,208,171,197,212,227,247,240,226,261,221,290,206,311,184,322,157,322,123,323,99,306,90,265,91,245,121,212" alt="San Juan"
+        data-provincia="San juan" href="javascript:void(0);" onclick="abrirProvincia(this)"> 
+    </map>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

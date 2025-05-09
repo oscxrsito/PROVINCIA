@@ -1,0 +1,583 @@
+/* Variables para colores y estilos generales */
+:root {
+  --primary-color: #29833a;
+  --secondary-color: #1a5e27;
+  --accent-color: #f4c01e;
+  --light-color: #f9f9f9;
+  --dark-color: #333;
+  --text-color: #333;
+  --border-radius: 10px;
+  --box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+}
+
+/* Estilos básicos y reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: #f5f7fa;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Lora', serif;
+  font-weight: 700;
+  color: var(--dark-color);
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--secondary-color);
+}
+
+ul {
+  list-style-type: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.page-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  background-color: white;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
+}
+
+/* Estilos del header */
+.main-header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+                    url('https://images.unsplash.com/photo-1608581796221-43449973ca22?q=80&w=2670&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 60px 5% 40px;
+  position: relative;
+  text-align: center;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.escudo-header {
+  width: 120px;
+  height: 120px;
+  overflow: hidden;
+  margin-right: 30px;
+}
+
+.escudo-header img {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.3));
+}
+
+.title-container {
+  text-align: left;
+}
+
+.main-header h1 {
+  font-size: 3.5rem;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--accent-color);
+  margin-top: -5px;
+}
+
+.header-description {
+  max-width: 700px;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: var(--border-radius);
+  padding: 25px;
+  border-left: 4px solid var(--accent-color);
+}
+
+.header-description h2 {
+  font-size: 1.5rem;
+  color: var(--accent-color);
+  margin-bottom: 10px;
+}
+
+/* Estilos de navegación */
+.main-nav {
+  background-color: var(--primary-color);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.main-nav ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.main-nav li {
+  margin: 0;
+}
+
+.main-nav a {
+  display: block;
+  color: white;
+  padding: 15px 25px;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.main-nav a:hover {
+  background-color: var(--secondary-color);
+}
+
+/* Estilos de las secciones generales */
+main {
+  padding: 40px 5%;
+}
+
+.section-container {
+  margin-bottom: 60px;
+  padding: 30px;
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.section-title {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+  border-bottom: 3px solid var(--accent-color);
+  position: relative;
+}
+
+/* Estilos para la sección de información general */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.info-card {
+  background-color: var(--light-color);
+  border-radius: var(--border-radius);
+  padding: 25px;
+  text-align: center;
+  transition: var(--transition);
+  border-bottom: 3px solid transparent;
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+  border-bottom: 3px solid var(--accent-color);
+  box-shadow: var(--box-shadow);
+}
+
+.info-icon {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.info-card h3 {
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+/* Estilos para la sección de historia */
+.history-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.history-item {
+  background-color: var(--light-color);
+  border-radius: var(--border-radius);
+  padding: 20px;
+  border-left: 4px solid var(--accent-color);
+}
+
+.history-item h3 {
+  color: var(--secondary-color);
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.heroes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.hero-item {
+  background-color: rgba(41, 131, 58, 0.1);
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-weight: 500;
+}
+
+/* Estilos para la sección de economía */
+.economy-container {
+  text-align: center;
+}
+
+.economy-text {
+  max-width: 800px;
+  margin: 0 auto 30px;
+  font-size: 1.1rem;
+}
+
+.economy-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.economy-icon-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 120px;
+}
+
+.economy-icon-item .icon {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.economy-icon-item .label {
+  font-weight: 600;
+  color: var(--secondary-color);
+}
+
+/* Estilos para la sección de turismo */
+.tourism-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.tourism-place {
+  background-color: white;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+}
+
+.tourism-place:hover {
+  transform: translateY(-5px);
+}
+
+.place-image {
+  height: 200px;
+  background-color: #ddd;
+  background-size: cover;
+  background-position: center;
+}
+
+.santo-cerro {
+  background-image: url('https://images.unsplash.com/photo-1527504683492-4a91fa486622?q=80&w=2574&auto=format&fit=crop');
+}
+
+.monasterio {
+  background-image: url('https://images.unsplash.com/photo-1548248823-ce16a73b6d49?q=80&w=2574&auto=format&fit=crop');
+}
+
+.vega-vieja {
+  background-image: url('https://images.unsplash.com/photo-1518723276788-88325a903678?q=80&w=2670&auto=format&fit=crop');
+}
+
+.parque-bermudez {
+  background-image: url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2560&auto=format&fit=crop');
+}
+
+.tourism-place h3 {
+  padding: 15px 15px 5px;
+  color: var(--primary-color);
+}
+
+.tourism-place p {
+  padding: 0 15px 15px;
+  font-size: 0.9rem;
+}
+
+/* Estilos para la sección de cultura */
+.culture-container {
+  text-align: center;
+}
+
+.culture-text {
+  max-width: 800px;
+  margin: 0 auto 30px;
+  font-size: 1.1rem;
+}
+
+.colorful-section {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: var(--light-color);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+}
+
+.carnival-image {
+  height: 300px;
+  background-image: url('https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=2574&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+}
+
+.colorful-section h3 {
+  padding: 20px 20px 5px;
+  color: var(--primary-color);
+  font-size: 1.5rem;
+}
+
+.colorful-section p {
+  padding: 0 20px 20px;
+}
+
+/* Estilos para la sección de municipios */
+.municipalities-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.municipality {
+  background-color: var(--light-color);
+  padding: 15px;
+  border-radius: var(--border-radius);
+  text-align: center;
+  font-weight: 600;
+  transition: var(--transition);
+  position: relative;
+}
+
+.municipality:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.capital-tag {
+  position: absolute;
+  top: -10px;
+  right: 10px;
+  background-color: var(--accent-color);
+  color: var(--dark-color);
+  font-size: 0.7rem;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+/* Estilos para la sección de infraestructura */
+.infrastructure-container {
+  text-align: center;
+}
+
+.infrastructure-container p {
+  max-width: 800px;
+  margin: 0 auto 30px;
+  font-size: 1.1rem;
+}
+
+.infra-icons {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.infra-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.infra-icon .icon {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.infra-icon .label {
+  font-weight: 600;
+  color: var(--secondary-color);
+}
+
+/* Estilos para la sección del escudo */
+.escudo-section {
+  text-align: center;
+}
+
+.escudo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.escudo-image {
+  width: 200px;
+}
+
+.escudo-description {
+  max-width: 600px;
+}
+
+/* Estilos para el footer */
+footer {
+  background-color: var(--dark-color);
+  color: white;
+  padding: 50px 5% 20px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.footer-escudo {
+  width: 60px;
+  height: auto;
+}
+
+.footer-logo h3 {
+  color: white;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.footer-links ul {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: var(--light-color);
+  transition: var(--transition);
+}
+
+.footer-links a:hover {
+  color: var(--accent-color);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.9rem;
+}
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+  .main-header h1 {
+    font-size: 2.5rem;
+  }
+ 
+  .header-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+ 
+  .escudo-header {
+    margin-right: 0;
+  }
+ 
+  .title-container {
+    text-align: center;
+  }
+ 
+  .main-nav ul {
+    flex-direction: column;
+  }
+ 
+  .main-nav a {
+    text-align: center;
+  }
+ 
+  .section-container {
+    padding: 20px;
+  }
+ 
+  .section-title {
+    font-size: 1.8rem;
+  }
+ 
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+ 
+  .footer-logo {
+    flex-direction: column;
+  }
+ 
+  .footer-links ul {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-header h1 {
+    font-size: 2rem;
+  }
+ 
+  .subtitle {
+    font-size: 1.2rem;
+  }
+ 
+  .header-description {
+    padding: 15px;
+  }
+ 
+  .info-card, .history-item {
+    padding: 15px;
+  }
+ 
+  .section-title {
+    font-size: 1.5rem;
+  }
+}
